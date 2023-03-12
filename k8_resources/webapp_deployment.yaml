@@ -1,16 +1,16 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: webapp-replicaset
+  name: webapp-deployment
   labels:
-    app: webapp-replicas
+    app: webapp-dep
 
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: employees
-      
+
   template:
     metadata:
       labels:
@@ -19,6 +19,7 @@ spec:
       containers:
         - name: webapp-container
           image: 103269930504.dkr.ecr.us-east-1.amazonaws.com/webapp:v0.1
+          imagePullPolicy: Always
           env:
             - name: DBPWD
               value: "P@assword"

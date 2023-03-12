@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: webapp
   labels:
-    app: frontend
+    app: employees
 spec:
   containers:
     - name: webapp-container
@@ -14,7 +14,7 @@ spec:
         - name: DBPORT
           value: "3306"
         - name: DBHOST
-          value: "mysql-service.default.svc.cluster.local"
+          value: "mysql-service.backend.svc.cluster.local"
         - name: DBUSER
           value: "root"
       ports:

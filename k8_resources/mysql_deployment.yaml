@@ -1,16 +1,16 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: mysql-replicaset
+  name: mysql-deployment
   labels:
-    app: mysql-replicas
+    app: mysql-dep
 
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: mysql
-      
+
   template:
     metadata:
       labels:

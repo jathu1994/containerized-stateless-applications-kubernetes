@@ -9,4 +9,5 @@ spec:
     - port: 3306
       targetPort: 3306
   selector:
-    app: mysqldb
+    app: mysql
+  type: ClusterIP
