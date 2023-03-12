@@ -12,7 +12,7 @@ spec:
         - name: DBPORT
           value: "3306"
         - name: DBHOST
-          value: "mysqldbs.default.svc.cluster.local"
+          value: "mysql-service.default.svc.cluster.local"
         - name: DBUSER
           value: "root"
       ports:
