@@ -2,16 +2,19 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: webapp-replicaset
+  labels:
+    app: webapp-replicas
 
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: frontend
+      app: employees
+      
   template:
     metadata:
       labels:
-        app: frontend
+        app: employees
     spec:
       containers:
         - name: webapp-container

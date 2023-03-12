@@ -9,12 +9,12 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: mysqldb
+      app: mysql
 
   template:
     metadata:
       labels:
-        app: mysqldb
+        app: mysql
     spec:
       containers:
         - name: mysql-container
